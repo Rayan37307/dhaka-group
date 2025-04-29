@@ -1,5 +1,4 @@
 import React from 'react'
-import { ColourfulText } from './Text'
 
 const Hero = () => {
   return (

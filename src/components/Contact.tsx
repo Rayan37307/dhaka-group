@@ -1,5 +1,6 @@
 import React from "react";
 import { Mail, Phone, MapPin, Facebook, Linkedin, Globe } from "lucide-react";
+import Link from "next/link";
 
 const Contact = () => {
   return (
@@ -24,9 +25,9 @@ const Contact = () => {
             <span className="text-gray-700">info@dhakagroup.com</span>
           </div>
           <div className="flex gap-4 mt-4">
-            <a href="https://facebook.com/" target="_blank" rel="noopener" className="hover:text-blue-600 transition"><Facebook className="w-5 h-5" /></a>
-            <a href="https://linkedin.com/" target="_blank" rel="noopener" className="hover:text-blue-700 transition"><Linkedin className="w-5 h-5" /></a>
-            <a href="https://dhakagroup.com/" target="_blank" rel="noopener" className="hover:text-green-700 transition"><Globe className="w-5 h-5" /></a>
+            <Link href="https://facebook.com/" target="_blank" rel="noopener" className="hover:text-blue-600 transition"><Facebook className="w-5 h-5" /></Link>
+            <Link href="https://linkedin.com/" target="_blank" rel="noopener" className="hover:text-blue-700 transition"><Linkedin className="w-5 h-5" /></Link>
+            <Link href="https://dhakagroup.com/" target="_blank" rel="noopener" className="hover:text-green-700 transition"><Globe className="w-5 h-5" /></Link>
           </div>
         </div>
         {/* Contact Form */}
