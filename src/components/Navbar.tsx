@@ -1,7 +1,7 @@
 'use client'
 import React, { useState } from 'react';
 import { MotionMenu } from './_motion-navbar';
-import { Home, Info, Phone, Building, Users, MapPin } from 'lucide-react';
+import { Home, Info, Phone, Building, Users, MapPin, Link } from 'lucide-react';
 
 
 const MenuItems = [
@@ -19,22 +19,22 @@ const Navbar = () => {
   return (
     <header className="fixed top-0 left-0 w-full z-30">
   <div className="mx-auto max-w-7xl border-b border-gray-100 bg-white bg-opacity-95 backdrop-blur-md shadow-lg px-6 py-4 flex justify-between items-center rounded-b-2xl">
-    <a href="/" className="flex gap-3 items-center">
+    <Link href="/" className="flex gap-3 items-center">
       <img src="/next.svg" alt="Logo" className="w-14 h-14 rounded-lg shadow" />
       <span className="font-extrabold text-2xl text-gray-900 tracking-tight">Dhaka Group</span>
-    </a>
+    </Link>
         {/* Desktop Menu */}
         <nav className="hidden md:block">
           <ul className="flex gap-2">
             {MenuItems.map((item) => (
               <li key={item.name}>
-                <a
+                <Link
                   href={item.href}
                   className="px-4 flex items-center gap-1 py-2 rounded-md font-medium text-gray-800 hover:bg-gray-100 hover:text-black transition-all duration-150"
                 >
                   <item.icon className="w-5 h-5" />
                   {item.name}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
@@ -55,13 +55,13 @@ const Navbar = () => {
         <ul className="flex flex-col gap-1 items-center py-2">
           {MenuItems.map((item) => (
             <li key={item.name}>
-              <a
+              <Link
                 href={item.href}
                 className="nav-link block text-lg font-medium text-gray-900 px-2 py-2"
                 onClick={() => setOpen(false)}
               >
                 {item.name}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
